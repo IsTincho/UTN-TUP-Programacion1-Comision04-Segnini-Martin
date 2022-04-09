@@ -2,6 +2,8 @@ Proceso U3_Ejercicio_07
 	
 	definir num, mayor, menor, acum Como Real
 	definir i,cant_n como Entero
+	mayor<-1
+	menor<-1
 	
 	Escribir  "Ingrese la cantidad de numeros a evaluar";
 	leer cant_n
@@ -11,7 +13,7 @@ Proceso U3_Ejercicio_07
 			Escribir "Ingrese el numero: ", i
 			Leer num
 			acum<-num
-			Si i=1
+			Si i=1 y num>=0
 				mayor<-num
 				menor<-num
 			SiNo
@@ -37,7 +39,4 @@ Proceso U3_Ejercicio_07
 		Escribir "No se pueden evaluar: ", cant_n," numeros.";
 		Escribir "ERROR. Cerrando... . . ..";
 	FinSi
-	
-	
-	
 FinProceso
