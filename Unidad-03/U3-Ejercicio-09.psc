@@ -12,15 +12,18 @@ Proceso U3_Ejercicio_06
 	
 	Repetir
 		Escribir "Vamos a ingresar las notas del parcial nro: ", cParcial;
-		
-		Para i<-1 hasta c_alum con paso 1
-			Escribir "Ingrese la nota del alumno nro: ", i;
-			Leer nota
-			Si nota<=10 y nota>=0
-				acum<-acum+nota
-			SiNo
-				Escribir "Ha ingresado una nota invalida.";
-			FinSi
+			
+			Para i<-1 hasta c_alum con paso 1
+			Repetir
+				Escribir "Ingrese la nota del alumno nro: ", i;
+				Leer nota
+				Si nota<=10 y nota>=0
+					acum<-acum+nota
+				SiNo
+					Escribir "Ha ingresado una nota invalida.";
+					Escribir "Vuelva a intentar";
+				FinSi
+			Mientras Que nota<0 o nota>10
 		FinPara
 		
 		prom<-acum/c_alum
@@ -37,7 +40,7 @@ Proceso U3_Ejercicio_06
 		cParcial<-cParcial+1
 		prom<-0
 		acum<-0
-	Mientras Que rep=Falso
+	Mientras Que rep=Verdadero
 	
 	
 FinProceso
