@@ -1,4 +1,5 @@
-Proceso Ejercicio_02
+Proceso Ejercicio_03
+	
 	Definir i,j, tamanio Como Entero
 	Definir posicion, dim Como Entero
 	Definir dni, personas, aux Como Caracter
@@ -108,7 +109,7 @@ SubProceso OrdenarApellidos(personas, cantPersonas)
 	Para i<-0 Hasta cantPersonas-2 Hacer
 		posicion <- i
 		Para j<-i+1 Hasta cantPersonas-1 Hacer
-			Si personas[j,1] < personas[posicion,1] Entonces
+			Si Concatenar(personas[j,1], personas[j,0]) < Concatenar(personas[posicion,1],personas[posicion,0]) Entonces
 				posicion <- j
 			FinSi
 			cant_comparaciones=cant_comparaciones + 1
